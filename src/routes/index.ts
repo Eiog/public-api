@@ -1,5 +1,6 @@
 import { Express, Request, Response, Router } from 'express'
 import ipAddressRoute from './ip-address.routes'
+import douyinRoute from './douyin.routes'
 interface RouterConf {
     path: string,
     router: Router,
@@ -9,7 +10,11 @@ const routes: RouterConf[] = [
     {
         path: '/ip-address',
         router: ipAddressRoute
-    }
+    },
+    {
+        path: '/dy',
+        router: douyinRoute
+    },
 ]
 const useRouter = async (app: Express) => {
     app.get('/', (req: Request, res: Response) => {
