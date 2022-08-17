@@ -7,7 +7,7 @@ interface RouterConf {
 }
 const routes: RouterConf[] = [
     {
-        path: '/ip',
+        path: '/ip-address',
         router: ipAddressRoute
     }
 ]
