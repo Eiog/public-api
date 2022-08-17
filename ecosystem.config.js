@@ -1,7 +1,7 @@
 module.exports = {
   apps: {
     name: "public-api",
-    script: "./dist/index.js",
+    script: "./dist/app.js",
   },
   deploy: {
     production: {
