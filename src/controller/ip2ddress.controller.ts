@@ -13,7 +13,7 @@ type address = {
     city?: string
     ISP?: string
 }
-export const getIpAddressHandler = async (req: Request, res: Response) => {
+export const ip2ddressHandler = async (req: Request, res: Response) => {
     const ip = req.query.ip || ''
     if (!ip) return res.status(500).send('ip is notfind')
     const searcher = Searcher.newWithFileOnly(dbPath)

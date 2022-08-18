@@ -1,5 +1,5 @@
 import { Express, Request, Response, Router } from 'express'
-import ipAddressRoute from './ip-address.routes'
+import ip2addressRoute from './ip2address.routes'
 import douyinRoute from './douyin.routes'
 interface RouterConf {
     path: string,
@@ -8,8 +8,8 @@ interface RouterConf {
 }
 const routes: RouterConf[] = [
     {
-        path: '/ip-address',
-        router: ipAddressRoute
+        path: '/ip2address',
+        router: ip2addressRoute
     },
     {
         path: '/dy',
