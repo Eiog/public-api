@@ -19,7 +19,7 @@ const routes: RouterConf[] = [
 const useRouter = async (app: Express) => {
     app.get('/', (req: Request, res: Response) => {
         const routerMap = routes.map(item => item.path)
-        res.send(routerMap)
+        res.send({ 'api-path': routerMap })
     })
     routes.forEach(({ path, router }) => app.use(path, router))
 }
