@@ -17,7 +17,7 @@ type address = {
 const router = Router();
 router.get('/', async (req: Request, res: Response) => {
   const ip = req.query.ip || '';
-  if (!ip) return res.status(500).send('ip is notfind');
+  if (!ip) return res.send('ip is notfind');
   try {
     // 创建searcher对象
     const searcher = Searcher.newWithFileOnly(dbPath);
